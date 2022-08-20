@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 my_saved_model = tf.keras.models.load_model(
     ('my_cds.h5')
-    #custom_object = {'KerasLayer': hub.KerasLayer}
+    custom_objects = {'KerasLayer': hub.KerasLayer}
 )
 
 a = 1
