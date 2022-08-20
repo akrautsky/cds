@@ -12,7 +12,9 @@ my_saved_model = tf.keras.models.load_model(
     custom_object = {'KerasLayer': hub.KerasLayer}
 )
 
+a = 1
 
 @app.route('/')
 def home():
     return render_template('home.html')
+
