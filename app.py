@@ -8,11 +8,10 @@ from flask import Flask,request,app,jsonify,url_for,render_template
 app = Flask(__name__)
 
 my_saved_model = tf.keras.models.load_model(
-    ('my_cds.h5')
+    ('my_cds.h5'),
     custom_objects = {'KerasLayer': hub.KerasLayer}
 )
 
-a = 1
 
 @app.route('/')
 def home():
